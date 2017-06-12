@@ -1,0 +1,5 @@
+%li{class: ('active' if (%w[pages photos attachments navigations] + Spina::Plugin.all.map { |plugin| plugin.namespace if current_theme.plugins.include?(plugin.name) }).include? controller_name)}
+  = link_to spina.admin_pages_path do
+    = icon('mail')
+    = 'Mail'
+    = icon('caret-right')
