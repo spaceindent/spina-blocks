@@ -1,0 +1,10 @@
+%fieldset
+  .restaurant-dish-fields
+    .restaurant-dish-name.column-nine
+      = f.text_field :name, placeholder: 'Naam van gerecht'
+      %small= f.text_field :description, placeholder: 'Beschrijving van gerecht'
+
+    .restaurant-dish-price.column-three
+      = f.text_field :price, placeholder: 'Prijs'
+      = f.hidden_field :_destroy
+      = link_to 'verwijderen', '#', class: 'remove_fields button button-link button-mini icon-mini', data: {icon: 'l'}

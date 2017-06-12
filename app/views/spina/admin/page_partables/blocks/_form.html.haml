@@ -1,0 +1,16 @@
+.horizontal-form-label
+  = f.object.title
+.horizontal-form-content
+  = f.hidden_field :id
+  = f.hidden_field :title
+  = f.hidden_field :page_partable_type
+  = f.hidden_field :name
+
+  = f.fields_for :page_partable, f.object.page_partable do |form|
+
+    = form.fields_for :restaurant_menus do |restaurant_menu_builder|
+      = render 'spina/admin/blocks/fields', f: restaurant_menu_builder
+
+    = link_to_add_fields form, :restaurant_menus do
+      %i{data: {icon: 't '}}
+      Nieuw restaurant menu
