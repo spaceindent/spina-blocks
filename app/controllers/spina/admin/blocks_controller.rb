@@ -67,6 +67,11 @@ module Spina
         end
       end
 
+      def destroy
+        @block = Block.find(params[:id])
+        @block.destroy
+        redirect_to spina.admin_blocks_url
+      end
 
       private def set_locale
         @locale = params[:locale] || I18n.default_locale
