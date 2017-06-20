@@ -1,0 +1,8 @@
+#advanced.tab-content.well
+  .horizontal-form
+    .horizontal-form-group
+      .horizontal-form-label
+        = Spina::Page.human_attribute_name :draft
+        %small= Spina::Page.human_attribute_name :draft_description
+      .horizontal-form-content
+        = f.check_box :draft, data: {switch: true}

@@ -1,0 +1,12 @@
+en:
+  spina-blocks:
+    published: 'Published'
+    draft: 'Draft'
+    create_block: 'New Block'
+    change_order: 'Change Order'
+    saving: 'Saving...'
+    save: 'Save Block'
+    permanently_delete: 'Delete Block'
+    delete_confirmation: 'Please confirm you wish to permanently delete this block?'
+    new: 'New Block'
+    blocks: 'Blocks'

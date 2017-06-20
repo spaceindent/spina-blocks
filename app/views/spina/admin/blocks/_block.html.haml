@@ -1,0 +1,9 @@
+= link_to spina.edit_admin_block_path(block), class: 'button button-link button-small sortable-link' do
+  = block.title
+  - if block.draft?
+    %small (#{t('spina.blocks.concept')})
+
+%span.pull-right
+  = link_to spina.edit_admin_block_path(block), class: 'button button-small button-link dd-nodrag' do
+    = icon('pencil-outline')
+    = t('spina.edit')
