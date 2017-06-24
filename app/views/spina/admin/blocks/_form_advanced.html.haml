@@ -6,3 +6,9 @@
         %small= Spina::Page.human_attribute_name :draft_description
       .horizontal-form-content
         = f.check_box :draft, data: {switch: true}
+
+    .horizontal-form-group
+      .horizontal-form-label
+        = Spina::Page.human_attribute_name :slug
+      .horizontal-form-content
+        = f.text_field :slug, placeholder: Spina::Page.human_attribute_name(:block_slug), value: f.object.read_attribute(:slug)

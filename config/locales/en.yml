@@ -10,3 +10,4 @@ en:
     delete_confirmation: 'Please confirm you wish to permanently delete this block?'
     new: 'New Block'
     blocks: 'Blocks'
+    done_changing_order: 'Update Order'

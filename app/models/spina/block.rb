@@ -25,5 +25,19 @@ module Spina
         block_part[:name].in? template_config[:block_parts]
       end
     end
+
+    def has_content?(block_part)
+      content(block_part).present?
+    end
+
+    def content(block_part)
+      block_part = block_parts.where(name: block_part).first
+      block_part.try(:content)
+    end
+
+    def live?
+      !draft? && active?
+    end
+
   end
 end

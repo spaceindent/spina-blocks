@@ -1,10 +1,6 @@
 - content_for :application do
   %header#header
     #header_actions
-      = link_to '#pages_list', class: 'button sort-switch', data: {change_order: t('spina.pages.change_order'), done_changing_order: t('spina-blocks.blocks.change_order')} do
-        = icon('random')
-        = t('spina-blocks.blocks.change_order')
-
       = yield(:header_actions) if content_for?(:header_actions)
 
     .breadcrumbs= render_breadcrumbs separator: '<div class="divider"></div>'
@@ -12,9 +8,9 @@
     %nav#secondary.tabs
       %ul
         %li{class: ('active' if controller_name == 'pages')}
-          = link_to t('spina-blocks.blocks.published'), spina.admin_blocks_path(filter: 'active')
+          = link_to t('spina-blocks.published'), spina.admin_blocks_path(filter: 'active')
         %li{class: ('active' if controller_name == 'pages')}
-          = link_to t('spina-blocks.blocks.draft'), spina.admin_blocks_path(filter: 'draft')
+          = link_to t('spina-blocks.draft'), spina.admin_blocks_path(filter: 'draft')
 
 
   = yield
